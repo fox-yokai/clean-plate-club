@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
+const mongoose = require("mongoose");
 
 const PORT = 5000;
 
 // Connect to the Mongo DB
-await mongoose.connect(
+mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/babish",
     {
       useCreateIndex: true,
